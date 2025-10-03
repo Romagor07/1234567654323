@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мониторинг серверов v3.2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app" class="light-theme">
+        <div class="title-bar">
+            <div class="title">🎮 Мониторинг серверов v3.2</div>
+            <div class="window-controls">
+                <button id="themeBtn" class="control-btn" title="Сменить тему">🌙</button>
+                <button id="addBtn" class="control-btn" title="Добавить сервер">➕</button>
+                <button id="refreshBtn" class="control-btn" title="Обновить все">🔄</button>
+                <button id="minimizeBtn" class="control-btn" title="Свернуть">➖</button>
+                <button id="closeBtn" class="control-btn" title="Закрыть">✕</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="serversList" class="servers-container"></div>
+        </div>
+
+        <div id="addServerModal" class="modal">
+            <div class="modal-content">
+                <h3>Добавить сервер</h3>
+                <div class="input-group">
+                    <label for="serverName">Название сервера:</label>
+                    <input type="text" id="serverName" placeholder="например: Мой игровой сервер">
+                </div>
+                <div class="input-group">
+                    <label for="serverIp">IP адрес или домен:</label>
+                    <input type="text" id="serverIp" placeholder="например: 192.168.1.1">
+                </div>
+                <div class="input-group">
+                    <label for="serverPort">Порт:</label>
+                    <input type="number" id="serverPort" value="25565" min="1" max="65535">
+                </div>
+                <div class="modal-buttons">
+                    <button id="cancelAdd">Отмена</button>
+                    <button id="confirmAdd">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
